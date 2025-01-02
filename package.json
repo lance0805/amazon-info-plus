@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "Chrome extension to show Amazon product information",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
+    "clean": "rm -rf dist",
+    "copy-static": "copyfiles -f manifest.json dist/ && copyfiles -f src/popup.html dist/ && copyfiles -f \"icons/*.*\" dist/icons/",
+    "build": "npm run clean && webpack --config webpack.config.js && npm run copy-static",
     "watch": "webpack --config webpack.config.js --watch"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.254",
+    "copyfiles": "^2.4.1",
     "ts-loader": "^9.5.1",
     "typescript": "^5.3.3",
     "webpack": "^5.89.0",
     "webpack-cli": "^5.1.4"
   }
-} 
+}

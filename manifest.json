@@ -20,7 +20,7 @@
   "content_scripts": [
     {
       "matches": ["https://www.amazon.co.jp/*"],
-      "js": ["dist/content.js"]
+      "js": ["content.js"]
     }
   ],
   "icons": {

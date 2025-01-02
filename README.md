@@ -1,46 +1,89 @@
 # Amazon Info Plus
 
-这是一个Chrome插件，用于显示Amazon日本站（amazon.co.jp）商品的产地、厂商和发货地信息。
+A Chrome extension that helps you quickly view product information on Amazon Japan, including manufacturer, seller, and delivery method.
 
-## 功能特点
+## Features
 
-- 在Amazon商品页面右侧显示固定的Info+按钮
-- 点击按钮显示商品的详细信息：
-  - 产地信息
-  - 厂商信息
-  - 发货地信息
+- 🔍 Instantly displays key product information:
+  - Manufacturer
+  - Seller
+  - Delivery Method
+- 🌐 Supports multiple languages:
+  - English
+  - Japanese (default)
+- 🎯 Currently supports Amazon Japan (amazon.co.jp) only
+- 🖱️ Simple click interaction:
+  - Click the button to show info
+  - Click outside to dismiss
 
-## 开发设置
+## Installation
 
-1. 安装依赖：
+### For Development
+
+1. Clone this repository
+```bash
+git clone https://github.com/yourusername/amazon-info-plus.git
+cd amazon-info-plus
+```
+
+2. Install dependencies
 ```bash
 npm install
 ```
 
-2. 构建项目：
+3. Build the extension
 ```bash
 npm run build
 ```
 
-3. 在Chrome中加载插件：
-   - 打开Chrome浏览器
-   - 访问 `chrome://extensions/`
-   - 开启"开发者模式"
-   - 点击"加载已解压的扩展程序"
-   - 选择项目目录
+4. Load the extension in Chrome:
+   - Open Chrome and navigate to `chrome://extensions/`
+   - Enable "Developer mode"
+   - Click "Load unpacked"
+   - Select the `dist` directory from this project
 
-## 开发命令
+### For Users
 
-- `npm run build`: 构建项目
-- `npm run watch`: 监听文件变化并自动构建
+*Coming soon to Chrome Web Store*
 
-## 技术栈
+## Development
+
+### Project Structure
+```
+amazon-info-plus/
+├── dist/               # Built extension files
+├── src/
+│   ├── content.ts     # Content script for product info extraction
+│   ├── popup.ts       # Popup script
+│   ├── popup.html     # Popup HTML
+│   └── i18n.ts        # Internationalization support
+├── icons/             # Extension icons
+├── manifest.json      # Extension manifest
+├── webpack.config.js  # Webpack configuration
+└── package.json       # Project dependencies and scripts
+```
+
+### Available Scripts
+
+- `npm run build`: Build the extension
+- `npm run clean`: Clean the dist directory
+- `npm run watch`: Watch for changes and rebuild
+
+### Technology Stack
 
 - TypeScript
 - Chrome Extension API
 - Webpack
+- i18n for internationalization
 
-## 注意事项
+## Contributing
 
-- 目前仅支持Amazon日本站点（amazon.co.jp）
-- 需要Chrome浏览器最新版本 
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details. 
