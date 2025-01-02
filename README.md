@@ -46,6 +46,8 @@ npm run build
 
 *Coming soon to Chrome Web Store*
 
+You can also download the latest release from the [GitHub Releases page](https://github.com/yourusername/amazon-info-plus/releases).
+
 ## Development
 
 ### Project Structure
@@ -75,6 +77,19 @@ amazon-info-plus/
 - Chrome Extension API
 - Webpack
 - i18n for internationalization
+
+### Release Process
+
+The project uses GitHub Actions for automated releases. When you push a new tag starting with 'v' (e.g., v1.0.0), it will:
+1. Build the project
+2. Create a ZIP file of the extension
+3. Create a new GitHub release with the ZIP file attached
+
+To create a new release:
+```bash
+git tag v1.0.0  # Replace with your version
+git push origin v1.0.0
+```
 
 ## Contributing
 
