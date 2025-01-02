@@ -1,65 +1,65 @@
-# 产品需求文档（PRD）
+# Product Requirements Document (PRD)
 
-## 产品名称
-Amazon Info Plus - Amazon 商品信息识别 Chrome 插件
+## Product Name
+Amazon Info Plus - Chrome Extension for Amazon Product Information
 
-## 背景和目标
-在 Amazon 购物时，许多用户希望快速了解商品的配送方式、卖家和制造商信息，以便做出更明智的购买决策。本产品旨在通过一个简单易用的 Chrome 插件，帮助用户在浏览 Amazon 商品时即时获取这些关键信息。
+## Background and Objectives
+When shopping on Amazon, many users want to quickly understand product information such as delivery method, seller, and manufacturer to make more informed purchasing decisions. This product aims to help users instantly access this key information while browsing Amazon products through a simple and user-friendly Chrome extension.
 
-## 目标用户
-- 主要目标用户：经常在 Amazon 上购物的消费者，尤其是对商品配送方式和卖家信息敏感的用户。
+## Target Users
+- Primary users: Frequent Amazon shoppers, especially those who are particular about delivery methods and seller information.
 
-## 功能需求
-### 核心功能
-1. 支持识别并显示以下信息：
-   - 商品的制造商
-   - 商品的卖家
-   - 配送方式
-2. **首个版本限定：仅支持 Amazon 日本站点（https://www.amazon.co.jp）。**
-3. 支持多语言：
-   - 英语
-   - 日语（默认）
+## Functional Requirements
+### Core Features
+1. Support identifying and displaying the following information:
+   - Product manufacturer
+   - Product seller
+   - Delivery method
+2. **First version limitation: Only supports Amazon Japan site (https://www.amazon.co.jp).**
+3. Multi-language support:
+   - English
+   - Japanese (default)
 
-### 插件界面
-1. 插件图标显示在 Chrome 工具栏。
-2. 在商品页面上显示一个按钮，点击后弹出信息窗口。
-3. 点击页面其他区域时自动关闭信息窗口。
+### Extension Interface
+1. Extension icon displayed in Chrome toolbar
+2. Button displayed on product pages that opens an information window when clicked
+3. Information window automatically closes when clicking elsewhere on the page
 
-### 非功能需求
-- **性能要求**：信息提取需在 2 秒内完成。
-- **兼容性**：支持最新版本的 Chrome 浏览器。
-- **用户体验**：
-  - 插件界面设计简洁，突出重点信息。
-  - 插件使用过程流畅，无明显卡顿。
-  - 根据浏览器语言自动切换显示语言。
+### Non-functional Requirements
+- **Performance**: Information extraction should complete within 2 seconds
+- **Compatibility**: Supports latest versions of Chrome browser
+- **User Experience**:
+  - Clean extension interface that highlights key information
+  - Smooth operation with no noticeable lag
+  - Automatically switches display language based on browser settings
 
-## 用户交互设计
-1. **信息按钮**：
-   - 位置：商品页面上。
-   - 点击行为：打开一个弹窗。
-   - 点击页面其他区域：关闭弹窗。
+## User Interaction Design
+1. **Info Button**:
+   - Location: On product pages
+   - Click behavior: Opens a popup window
+   - Click outside: Closes the popup
 
-2. **弹窗内容**：
-   - 商品的制造商
-   - 商品的卖家
-   - 配送方式
+2. **Popup Content**:
+   - Product manufacturer
+   - Product seller
+   - Delivery method
 
-## 技术要求
-- 语言和框架：
-  - 使用 TypeScript 开发
-  - 使用 Chrome 插件 API
-  - 使用 Webpack 构建
-- 数据来源：解析 Amazon 页面 DOM，提取相关信息
-- 国际化：使用 i18n 支持多语言
+## Technical Requirements
+- Language and Framework:
+  - Developed using TypeScript
+  - Uses Chrome Extension API
+  - Built with Webpack
+- Data Source: Parses Amazon page DOM to extract relevant information
+- Internationalization: Uses i18n for multi-language support
 
-## 验收标准
-1. 插件能够正确识别并展示商品的制造商、卖家和配送方式。
-2. 插件界面布局符合设计规范。
-3. 信息提取响应时间不超过 2 秒。
-4. 在最新版本 Chrome 浏览器中无兼容性问题。
-5. 正确响应用户交互（点击打开/关闭）。
-6. 正确根据浏览器语言显示对应语言。
+## Acceptance Criteria
+1. Extension correctly identifies and displays product manufacturer, seller, and delivery method
+2. Extension interface layout follows design specifications
+3. Information extraction response time does not exceed 2 seconds
+4. No compatibility issues with latest Chrome browser versions
+5. Correctly responds to user interactions (click to open/close)
+6. Correctly displays language based on browser settings
 
-## 附录
-- [Chrome 插件开发文档](https://developer.chrome.com/docs/extensions/)
-- [Amazon 页面结构参考](https://www.amazon.co.jp)
+## Appendix
+- [Chrome Extension Development Documentation](https://developer.chrome.com/docs/extensions/)
+- [Amazon Page Structure Reference](https://www.amazon.co.jp)

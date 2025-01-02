@@ -22,7 +22,7 @@ A Chrome extension that helps you quickly view product information on Amazon Jap
 
 1. Clone this repository
 ```bash
-git clone https://github.com/yourusername/amazon-info-plus.git
+git clone https://github.com/lance0805/amazon-info-plus.git
 cd amazon-info-plus
 ```
 
